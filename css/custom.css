@@ -10,9 +10,9 @@ html, body {
     padding: 0;
     border: 0;
 }
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
     font-family: 'Hammersmith One', sans-serif;
-}
+}*/
 * {
     outline: none;
 }
@@ -95,9 +95,18 @@ a {
     -o-transition: all 0.25s linear;
     transition: all 0.25s linear;
 }
-.navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {
+.navbar-default .navbar-nav > li > a, .navbar-default {
     color: #44281A;
-    font-size: 18px;
+    font-size: 10px;
+    letter-spacing: 2pt;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navbar-default .navbar-brand {
+    color: #D7D3D0;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 3pt;
 }
 #container {
     height: 100%;
@@ -395,7 +404,7 @@ a:last-child > .line {
     width: 100%;
 }
 .gallery-img-sm {
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
     margin: 0 0 10px 10px;
     display: inline-block;
 }

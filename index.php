@@ -63,7 +63,7 @@ $images = $query->select("allImages");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#billboard-wrap">HOME</a>
+                <a class="navbar-brand" href="#billboard-wrap">ACMCU HOME</a>
             </div>
             <div class="collapse navbar-collapse" id="collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -84,7 +84,7 @@ $images = $query->select("allImages");
     <div class="container-fluid" id="container">
         <div class="row " id="billboard-wrap">
             <div id="billboard-overlay">
-                <img class="site-logo" src="assets/white-logo.png">
+                <!-- <img class="site-logo" src="assets/white-logo.png"> -->
             </div>
         </div>
         <div class="row" id="events-wrap">
@@ -269,44 +269,45 @@ $images = $query->select("allImages");
             $(window).scroll(function () {
                 var navbar = $('.navbar');
                 if ($(this).scrollTop() > 10) {
-                    navbar.css('background-color', 'rgba(68, 40, 26, 0.7)');
-                    navbar.css('-webkit-box-shadow', '0 1px 1px 0 rgba(0, 0, 0, 0.6)');
-                    navbar.css('box-shadow', '0 1px 1px 0 rgba(0, 0, 0, 0.6)');
-                    $('.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand').css('color', '#D7D3D0').hover(
-                        function () {
-                            $(this).css('color', '#44281A');
-                        },
-                        function () {
-                            $(this).css('color', '#D7D3D0');
-                        }
-                    );
+                    // navbar.css('background-color', 'rgba(68, 40, 26, 0.7)');
+                    navbar.css('background-color', 'rgba(256, 256, 256, 0.8)');
+                    navbar.css('-webkit-box-shadow', '0 2px 2px 0 rgba(0, 0, 0, 0.1)');
+                    // navbar.css('box-shadow', '0 1px 1px 0 rgba(0, 0, 0, 0.2)');
+                    // $('.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand').hover(
+                    //     function () {
+                    //         $(this).css('color', '#A8CEE2');
+                    //     },
+                    //     function () {
+                    //         $(this).css('color', '#A8CEE2');
+                    //     }
+                    // );
 
                 } else {
                     navbar.css('background-color', 'transparent');
                     navbar.css('-webkit-box-shadow', 'none');
                     navbar.css('box-shadow', 'none');
-                    $('.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand').css('color', '#44281A');
-                    $('.navbar-default .navbar-nav>li>a').hover(
-                        function () {
-                            $(this).css('color', '#7A787D');
-                        },
-                        function () {
-                            $(this).css('color', '#44281A');
-                        }
-                    );
-                    $('.navbar-default .navbar-brand').hover(
-                        function () {
-                            $(this).css('color', '#D7D3D0');
-                        },
-                        function () {
-                            $(this).css('color', '#44281A');
-                        }
-                    );
+                    // $('.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand').css('color', '#44281A');
+                    // $('.navbar-default .navbar-nav>li>a').hover(
+                    //     function () {
+                    //         $(this).css('color', '#7A787D');
+                    //     },
+                    //     function () {
+                    //         $(this).css('color', '#44281A');
+                    //     }
+                    // );
+                    // $('.navbar-default .navbar-brand').hover(
+                    //     function () {
+                    //         $(this).css('color', '#D7D3D0');
+                    //     },
+                    //     function () {
+                    //         $(this).css('color', '#44281A');
+                    //     }
+                    // );
                 }
             });
             $('.navbar-default .navbar-nav>li>a').hover(
                 function () {
-                    $(this).css('color', '#7A787D');
+                    $(this).css('color', '#A8CEE2');
                 },
                 function () {
                     $(this).css('color', '#44281A');
@@ -314,10 +315,10 @@ $images = $query->select("allImages");
             );
             $('.navbar-default .navbar-brand').hover(
                 function () {
-                    $(this).css('color', '#D7D3D0');
+                    $(this).css('color', '#A8CEE2');
                 },
                 function () {
-                    $(this).css('color', '#44281A');
+                    $(this).css('color', '#D7D3D0');
                 }
             );
 
