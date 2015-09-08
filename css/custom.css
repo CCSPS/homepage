@@ -378,7 +378,6 @@ a:last-child > .line {
 }
 .gallery-wrapper {
     position: relative;
-    height: 1000px;
 }
 .gallery-wrapper > h1 {
     text-align: center;
@@ -391,7 +390,7 @@ a:last-child > .line {
 .gallery-small {
     position: relative;
     margin-top: 20px;
-    height: 280px;
+    margin-bottom: 100px;
     width: 100%;
 }
 .gallery-img-sm {
@@ -469,9 +468,6 @@ a:last-child > .line {
     #about-long > p {
         text-align: left;
     }
-    .gallery-wrapper {
-        height: 1000px;
-    }
     .item {
         height: 450px;
     }
@@ -483,9 +479,6 @@ a:last-child > .line {
     }
     .events-container {
         padding: 0;
-    }
-    .gallery-wrapper {
-        height: 1200px;
     }
     .item {
         height: 600px;
@@ -500,9 +493,6 @@ a:last-child > .line {
     }
     .events-container {
         padding: 0;
-    }
-    .gallery-wrapper {
-        height: 1400px;
     }
     .item {
         height: 750px;

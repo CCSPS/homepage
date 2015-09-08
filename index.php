@@ -362,6 +362,7 @@ $images = $query->select("allImages");
             function resize_thumbnails() {
                 var width = $('.gallery-small').width();
                 if (width > 700) {
+                    $('.gallery-small').css('display', 'block');
                     var THUMBNAILS_PER_ROW = 8;
                     var IND_SPACING = 10;
                     var TOTAL_SPACING = ((THUMBNAILS_PER_ROW - 1) * IND_SPACING);
@@ -373,7 +374,7 @@ $images = $query->select("allImages");
                     });
                 }
                 else {
-                    $('.gallery-img-sm').css('display', 'none');
+                    $('.gallery-small').css('display', 'none');
                 }
             }
 
