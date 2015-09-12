@@ -61,13 +61,13 @@ h1 {
     font-size: 18px;
 }*/
 #event-wrap {
-    padding: 0px;
+    padding: 0;
 }
 #event-details {
     margin-bottom: 30px;
 }
 #event-details > div {
-    padding: 0px;
+    padding: 0;
 }
 #event-name {
     text-align: center;
@@ -78,7 +78,7 @@ h1 {
     font-family: 'Lobster', cursive;
     color: #E98B33;
     font-size: 3em;
-    margin: 0px;
+    margin: 0;
 }*/
 #event-description {
     overflow: visible;
@@ -102,7 +102,7 @@ h1 {
 	padding-left: 1em;
 	text-indent: -1em;
     display: inline-block;
-    margin: 0px;
+    margin: 0;
     font-size: 1.5em;
     color: #7A787D;
 }*/
@@ -113,7 +113,7 @@ h1 {
 	padding-left: 1em;
 	text-indent: -1em;
     display: inline-block;
-    margin: 0px;
+    margin: 0;
     font-size: 1.5em;
     color: #7A787D;
 }*/
@@ -124,7 +124,7 @@ h1 {
 	padding-left: 1em;
 	text-indent: -1em;
     display: inline-block;
-    margin: 0px;
+    margin: 0;
     font-size: 1.5em;
     color: #7A787D;
 }*/
@@ -135,7 +135,7 @@ h1 {
     color: white;
     opacity: 0.5;
     font-size: 2em;
-    margin: 0.1em 0.5em 0.1em 0em;
+    margin: 0.1em 0.5em 0.1em 0;
     -webkit-transition: all 0.25s linear;
     -moz-transition: all 0.25s linear;
     -o-transition: all 0.25s linear;
@@ -155,14 +155,14 @@ h1 {
 .profile {
     display: inline-block;
     text-align: center;
-    padding: 0px 10px;
+    padding: 0 10px;
 }
 .profile-name {
     font-weight: bold;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0 0 0;
 }
 .profile-company {
-    margin: 0px;
+    margin: 0;
 }
 .profile-frame {
     /*background-color: #44281A;*/
@@ -188,23 +188,15 @@ h1 {
     transform: translateY(-50%);
 }
 .form-group {
-    padding: 0px;
+    padding: 0;
     margin-bottom: 10px;
 }
 #register-form {
     margin-bottom: 30px;
 }
-.btn, .btn:hover{
+.btn, .btn:hover {
     padding: 1em 1em 1em 1em;
 }
-.btn {
-    background-color: 
-}
-
-/*#register-btn {*/
-    /*font-size: 2em;*/
-    /*font-weight: bold;*/
-/*}*/
 .gallery-small {
     height: auto;
 }
@@ -240,7 +232,7 @@ h1 {
     #event-location {
         text-align: center;
         /*text-indent: 1em;*/
-        margin-bottom: 0px !important;
+        margin-bottom: 0 !important;
     }
     #event-links {
         text-align: center;
@@ -297,7 +289,7 @@ h1 {
         margin-bottom: 20px;
     }
     #event-details-split > div {
-        padding: 0px;
+        padding: 0;
         margin-bottom: 10px;
     }
     #event-date {
