@@ -6,12 +6,12 @@ use Mailgun\Mailgun;
 $apiKey = 'key-c04a162cc2427ac6d7d88a9d5d99f49f';
 $name = $_POST["name"];
 $fromAddr = $_POST["email"];
-$toAddr = 'koi2104@columbia.edu';
-$subj = "ACMCU: CONTACT";
-$body = $_POST["message"];
+$toAddr = 'contact@acmcu.com';
+$subj = $_POST["subject"];
+$body = "Name: " . $name . "\n" . "Message: " . $_POST["message"];
 
 if ((!$name) || (!$fromAddr) || (!$body)) {
-    return http_response_code(403);
+    return http_response_code(400);
 }
 
 # Instantiate the client.

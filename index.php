@@ -147,13 +147,7 @@ $images = $query->select("allImages");
                             $past = $query->select("passed");
                             for ($i = 0; $i < count($past); $i++) {
                                 $date = date_create($past[$i]["start_datetime"]);
-                                $item = '<h3><a href="events.php?call=' . $past[$i]["event_id"] . '"target="_self"><li class="events-list-item">';
-                                // $item .= '<div class="past-date-wrap">';
-                                // $item .= '<div class="past-date">';
-                                // $item .= '<div class="past-date-month">' . strtoupper($date->format('M')) . '</div>';
-                                // $item .= '<div class="past-date-day">' . $date->format('j') . '</div>';
-                                // $item .= '</div>';
-                                // $item .= '</div>';
+                                $item = '<h3><a href="events.php?call=' . $past[$i]["event_id"] . '" target="_self"><li class="events-list-item">';
                                 $item .= '' . $past[$i]["name"] . '</li></a></h3>';
                                 echo $item;
                             }
@@ -241,6 +235,7 @@ $images = $query->select("allImages");
                             <div class="form-group col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
                                 <textarea class="form-control" rows="8" id="message" name="message" placeholder="Enter Message"></textarea>
                             </div>
+                            <input type="hidden" name="subject" value="ACMCU: CONTACT">
                         </div>
                         <div id="contact-btn-wrap">
                             <button type="submit" class="btn btn-default" id="contact-btn">SUBMIT</button>
@@ -278,40 +273,40 @@ $images = $query->select("allImages");
                     // navbar.css('background-color', 'rgba(68, 40, 26, 0.7)');
                     navbar.css('background-color', 'rgba(196, 216, 226, 0.8)');
                     navbar.css('-webkit-box-shadow', '0 2px 2px 0 rgba(0, 0, 0, 0.1)');
-                    // navbar.css('box-shadow', '0 1px 1px 0 rgba(0, 0, 0, 0.2)');
-                    // $('.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand').hover(
-                    //     function () {
-                    //         $(this).css('color', '#A8CEE2');
-                    //     },
-                    //     function () {
-                    //         $(this).css('color', '#A8CEE2');
-                    //     }
-                    // );
-                    $('.navbar-default .navbar-brand').css('color', 'white');
+                    $('.navbar-default .navbar-brand')
+                        .unbind('mouseenter mouseleave')
+                        .css('color', 'black')
+                        .hover(function () {
+                            $(this).css('color', 'white');
+                        }, function () {
+                            $(this).css('color', 'black');
+                        }
+                    );
 
                 } else {
                     navbar.css('background-color', 'transparent');
                     navbar.css('-webkit-box-shadow', 'none');
                     navbar.css('box-shadow', 'none');
-                    // $('.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand').css('color', '#44281A');
-                    // $('.navbar-default .navbar-nav>li>a').hover(
-                    //     function () {
-                    //         $(this).css('color', '#7A787D');
-                    //     },
-                    //     function () {
-                    //         $(this).css('color', '#44281A');
-                    //     }
-                    // );
-                    // $('.navbar-default .navbar-brand').hover(
-                    //     function () {
-                    //         $(this).css('color', '#D7D3D0');
-                    //     },
-                    //     function () {
-                    //         $(this).css('color', '#44281A');
-                    //     }
-                    // );
+                    $('.navbar-default .navbar-brand')
+                        .unbind('mouseenter mouseleave')
+                        .css('color', 'white')
+                        .hover(function () {
+                            $(this).css('color', '#C4D8E2');
+                        }, function () {
+                            $(this).css('color', 'white');
+                        }
+                    );
                 }
             });
+            $('.navbar-default .navbar-brand')
+                .unbind('mouseenter mouseleave')
+                .css('color', 'white')
+                .hover(function () {
+                    $(this).css('color', '#C4D8E2');
+                }, function () {
+                    $(this).css('color', 'white');
+                }
+            );
             $('.navbar-default .navbar-nav>li>a').hover(
                 function () {
                     $(this).css('color', 'white');
@@ -320,15 +315,6 @@ $images = $query->select("allImages");
                     $(this).css('color', 'black');
                 }
             );
-            $('.navbar-default .navbar-brand').hover(
-                function () {
-                    $(this).css('color', '#A8CEE2');
-                },
-                function () {
-                    $(this).css('color', 'white');
-                }
-            );
-
             $('form').on('submit', function (e) {
                 e.preventDefault();
                 $.ajax({
@@ -368,7 +354,8 @@ $images = $query->select("allImages");
             });
 
             function resize_thumbnails() {
-                var width = $('.gallery-small').width();
+                var width = $('.gallery-small').width() - 10;
+                console.log(width);
                 if (width > 700) {
                     var THUMBNAILS_PER_ROW = 8;
                     var IND_SPACING = 10;
@@ -376,8 +363,8 @@ $images = $query->select("allImages");
                     var tn_width = ((width - TOTAL_SPACING) / THUMBNAILS_PER_ROW);
                     var tn_height = (tn_width * (5 / 7));
                     $('.gallery-img-sm').css({
-                        'width': tn_width,
-                        'height': tn_height
+                        'width': parseInt(tn_width),
+                        'height': parseInt(tn_height)
                     });
                 }
                 else {

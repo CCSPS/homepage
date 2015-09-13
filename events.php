@@ -136,17 +136,19 @@ if (isset($_GET["call"])) {
                         </div>
                     </div>
                     <div class="hidden-xs col-xs-12 col-sm-offset-1 col-sm-6" id="register-form">
-                        <form role="form" id="register-form-wrap">
+                        <form role="form" id="register-form-wrap" action="scripts/send.php">
                             <div class="col-xs-12" id="register-form-fields">
                                 <div class="form-group col-xs-12">
-                                    <input type="textarea" class="form-control" id="name" placeholder="Full Name">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
                                 </div>
                                 <div class="form-group col-xs-12">
-                                    <input type="email" class="form-control" id="email" placeholder="UNI">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                                 </div>
+                                <input type="hidden" name="subject" value="ACMCU: REGISTRATION">
+                                <input type="hidden" name="message" value="Registering for <?php echo $event["name"] ?>">
                             </div>
                             <div class="col-xs-12" id="register-btn-wrap">
-                                <button type="button" class="col-xs-12 btn btn-default" id="register-btn">Register</button>
+                                <button type="submit" class="btn btn-default" id="register-btn">Register</button>
                             </div>
                         </form>
                     </div>
@@ -174,21 +176,6 @@ if (isset($_GET["call"])) {
                         }
                         ?>
                     </div>
-                </div>
-                <div class="visible-xs col-xs-12" id="register-form">
-                    <form role="form" id="register-form-wrap">
-                        <div class="col-xs-12" id="register-form-fields">
-                            <div class="form-group col-xs-12">
-                                <input type="textarea" class="form-control" id="name" placeholder="Full Name">
-                            </div>
-                            <div class="form-group col-xs-12">
-                                <input type="email" class="form-control" id="email" placeholder="UNI">
-                            </div>
-                        </div>
-                        <div class="col-xs-12" id="register-btn-wrap">
-                            <button type="button" class="col-xs-12 btn btn-default" id="register-btn">Register</button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -220,21 +207,11 @@ if (isset($_GET["call"])) {
         <script type="text/javascript">
             //gallery thumbnails correspond to image on display on click
             $('.gallery-img-sm').click(function () {
-                $('.carousel').carousel('pause');
-                var file = $(this).css('background-image').split('/');
-                file = file[file.length - 1].replace(')', '');
-                $('.active').removeClass('active');
-                $('.item').children().each(function () {
-                    var src = $(this).attr('src').split('/');
-                    src = src[src.length - 1];
-                    if (src === file) {
-                        $(this).parent().addClass('active');
-                    }
-                })
+                $('.carousel').carousel($(this).index());
             });
 
             function resize_thumbnails() {
-                var width = $('.gallery-small').width();
+                var width = $('.gallery-small').width() - 10;
                 console.log(width);
                 if (width > 700) {
                     var THUMBNAILS_PER_ROW = 8;
@@ -262,6 +239,27 @@ if (isset($_GET["call"])) {
             //resize gallery thumbnails on window resize
             $(window).resize(function () {
                 resize_thumbnails();
+            });
+
+            $('form').on('submit', function (e) {
+                console.log($(this).attr('action'));
+
+                e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    cache: false,
+                    url: $(this).attr('action'),
+                    data: $(this).serialize(),
+                    success: function () {
+                        $("#name").val('');
+                        $("#email").val('');
+                        alert("You Have Been Registered.");
+                    },
+                    error: function (e) {
+                        console.log(e);
+                        alert("Please Complete all Sections");
+                    }
+                })
             });
         </script>
 </body>
