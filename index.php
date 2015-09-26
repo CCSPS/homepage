@@ -170,15 +170,15 @@ $images = $query->select("allImages");
                             community, appealing both to majors and non-majors alike.</h3>
                     </div>
                     <div class="col-xs-12 col-sm-8" id="about-long">
-                        <p>We hold weekly board meetings in Hamilton (room TBD) on Wednesdays at 9:00 PM (for Spring 2014).
-                            Meetings are open to all members of our mailing list. We welcome anyone with an interest in technology.<br><br></p>
+                        <p>We hold practices for ICPC every Saturday at noon in CSB 477.
+                            We welcome anyone with an interest in programming.<br><br></p>
                         <p>For specific inquiries, feel free to contact us at:
-                            <a href="mailto:acmofficers@lists.cs.columbia.edu">acmofficers@lists.cs.columbia.edu</a>
+                            <a href="mailto:contact@acmcu.com">contact@acmcu.com</a>.<br>
                         </p>
                         <p>Follow us on Twitter at
                             <a href="http://twitter.com/columbia_acm">@columbia_acm</a>
                             or on Facebook at
-                            <a href="http://www.facebook.com/cuacm">facebook.com/cuacm</a>
+                            <a href="http://www.facebook.com/cuacm">facebook.com/cuacm</a>.
                         </p>
                     </div>
                 </div>
