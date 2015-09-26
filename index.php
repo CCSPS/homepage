@@ -160,20 +160,26 @@ $images = $query->select("allImages");
         <div class="row" id="about-wrap">
             <div id="about-overlay">
                 <div class="col-xs-12" id="about-title">
-                <!-- <div class="col-xs-12"> -->
+                    <!-- <div class="col-xs-12"> -->
                     <h1>ABOUT</h1>
                 </div>
                 <div class="col-xs-12" id="about-container">
                     <div class="col-xs-12 col-sm-4" id="about-short">
-                        <h3>The Columbia Computer Science Preprofessional Society works to bring a broad range of
-                            career-related programming to Columbia students.</h3>
+                        <h3>The Columbia University Association for Computing Machinery (ACM) was founded in hopes of
+                            showing the many facets of computer science and information technology to the Columbia University
+                            community, appealing both to majors and non-majors alike.</h3>
                     </div>
                     <div class="col-xs-12 col-sm-8" id="about-long">
-                        <p>The Columbia Computer Science Preprofessional Society works to bring a broad range of
-                            career-related programming to Columbia students. We want to make it easier for students to get
-                            introduced to and explore the different CS-related career trajectories available to them, across
-                            several disciplines and roles. Ultimately, we want to be a go-to resource for CS students,
-                            whether they're interested in core tech jobs or in interdisciplinary academia.</p>
+                        <p>We hold weekly board meetings in Hamilton (room TBD) on Wednesdays at 9:00 PM (for Spring 2014).
+                            Meetings are open to all members of our mailing list. We welcome anyone with an interest in technology.<br><br></p>
+                        <p>For specific inquiries, feel free to contact us at:
+                            <a href="mailto:acmofficers@lists.cs.columbia.edu">acmofficers@lists.cs.columbia.edu</a>
+                        </p>
+                        <p>Follow us on Twitter at
+                            <a href="http://twitter.com/columbia_acm">@columbia_acm</a>
+                            or on Facebook at
+                            <a href="http://www.facebook.com/cuacm">facebook.com/cuacm</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -181,7 +187,7 @@ $images = $query->select("allImages");
         <div class="row" id="resources-wrap">
             <div id="resources-overlay">
                 <div class="col-xs-12" id="resources-title">
-                <!-- <div class="col-xs-12"> -->
+                    <!-- <div class="col-xs-12"> -->
                     <h1>RESOURCES</h1>
                 </div>
                 <div class="input-group input-group-lg" id="resources-bar">
@@ -220,7 +226,7 @@ $images = $query->select("allImages");
         <div class="row" id="contact-wrap">
             <div id="contact-overlay">
                 <div class="col-xs-12" id="contact-title">
-                <!-- <div class="col-xs-12"> -->
+                    <!-- <div class="col-xs-12"> -->
                     <h1>CONTACT US</h1>
                 </div>
                 <div class="col-xs-12" id="contact-form-wrap">
