@@ -145,7 +145,7 @@ $images = $query->select("allImages");
                         <ul>
                             <?php
                             $past = $query->select("passed");
-                            for ($i = 0; $i < count($past); $i++) {
+                            for ($i = count($past) - 1; $i >= 0; $i--) {
                                 $date = date_create($past[$i]["start_datetime"]);
                                 $item = '<h3><a href="events.php?call=' . $past[$i]["event_id"] . '" target="_self"><li class="events-list-item">';
                                 $item .= '' . $past[$i]["name"] . '</li></a></h3>';
