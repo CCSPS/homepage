@@ -5,9 +5,9 @@ ini_set('display_errors', 'on');
 //load database
 require_once('scripts/query.php');
 //database parameters
-$servername = "dev.kovits.com";
+$servername = "dev.haighr.com";
 $username = "acmcu";
-$password = "koi2104";
+$password = "4CMisC00l";
 $db_name = "acmcu";
 $port = 3306;
 $table = "events";
